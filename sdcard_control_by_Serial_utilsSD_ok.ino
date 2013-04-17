@@ -404,7 +404,7 @@ void loop(){
 
         //--- fonction avec parametre Texte - testdatalog(chemin,nombreMesures)
        param=""; // RAZ param...
-       param=utils.testInstructionString("testDatalog(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+       param=utils.testInstructionString("testdatalog(", chaineReception, true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
