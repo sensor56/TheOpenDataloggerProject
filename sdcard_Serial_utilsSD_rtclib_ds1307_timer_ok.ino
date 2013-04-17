@@ -556,7 +556,9 @@ void timerEvent(int indexIn){
                  dataFile.print(";");                  
                  
                  //dataFile.println(analogRead(A3)); // enregistre mesure A3
-                 dataFile.println(analogRead(indexIn)); // enregistre mesure analogique voie i 
+                 dataFile.print(analogRead(indexIn)); // enregistre mesure analogique voie i 
+                 dataFile.println(";");
+
                                  
                 dataFile.close(); // fermeture du fichier obligatoire après accès 
                 Serial.println(F("Ecriture fichier OK")); 
