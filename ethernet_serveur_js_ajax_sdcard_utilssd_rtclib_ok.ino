@@ -131,7 +131,7 @@ void loop(){
       if (now.unixtime()-seconde0>=delai) { // si une seconde s'est écoulée 
     
       //Serial.println(now.unixtime(), DEC); // affiche secondes depuis le 1/1/1970
-      Serial.print("."); 
+      //Serial.print("."); // visualise les secondes mais pose problème d'affichage... 
       seconde0=now.unixtime(); 
 
     } // fin si 1 seconde
