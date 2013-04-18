@@ -1008,7 +1008,8 @@ void loop(){
                  dataFile.print(millis());            
                  dataFile.print(";"); 
                  
-                 dataFile.println(analogRead(A3)); // affiche mesure A3 - mieux sur shieldEthernet - A0 est fixe à 1023... 
+                 dataFile.print(analogRead(A3)); // affiche mesure A3 - mieux sur shieldEthernet - A0 est fixe à 1023... 
+                 dataFile.println(";"); 
                  
               } // fin for                
                 
