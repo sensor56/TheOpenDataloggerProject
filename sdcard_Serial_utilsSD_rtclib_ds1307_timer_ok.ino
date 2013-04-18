@@ -556,7 +556,7 @@ void timerEvent(int indexIn){
                  dataFile.print(";");                  
                  
                  //dataFile.println(analogRead(A3)); // enregistre mesure A3
-                 dataFile.print(analogRead(indexIn)); // enregistre mesure analogique voie i 
+                 dataFile.print(analogRead(indexIn)); // enregistre mesure analogique voie indexIn 
                  dataFile.println(";");
 
                                  
