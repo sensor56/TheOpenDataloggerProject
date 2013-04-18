@@ -1267,7 +1267,8 @@ void timerEvent(int indexIn){
                  dataFile.print(now.unixtime());   
                  dataFile.print(";");                  
                  //dataFile.println(analogRead(A0)); // affiche mesure A0
-                 dataFile.println(analogRead(indexIn)); // affiche mesure voie index
+                 dataFile.print(analogRead(indexIn)); // affiche mesure voie index
+                 dataFile.println(";");                  
 
                                  
                 dataFile.close(); // fermeture du fichier obligatoire après accès 
@@ -1339,8 +1340,8 @@ void timerEventEthernet(int indexIn){
                  dataFile.print(now.unixtime());   
                  dataFile.print(";");                  
                  //dataFile.println(analogRead(A3)); // affiche mesure A3
-                 dataFile.println(analogRead(indexIn)); // affiche mesure voie index
-                 dataFile.print(";");                  
+                 dataFile.print(analogRead(indexIn)); // affiche mesure voie index
+                 dataFile.println(";");                  
                                  
                 dataFile.close(); // fermeture du fichier obligatoire après accès 
                 Serial.println(F("Ecriture fichier OK")); 
