@@ -508,7 +508,8 @@ void loop(){
                  dataFile.print(millis());            
                  dataFile.print(";"); 
                  
-                 dataFile.println(analogRead(A0)); // affiche mesure A0
+                 dataFile.print(analogRead(A3)); // affiche mesure A3
+                 dataFile.println(";"); 
                  
               } // fin for                
                 
