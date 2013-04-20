@@ -31,7 +31,7 @@ class myApp(QWidget, Ui_Form): # la classe reçoit le Qwidget principal ET la cl
 		self.setupUi(parent) # Obligatoire 
 
 		#Ici, personnalisez vos widgets si nécessaire
-
+        
 		#Réalisez les connexions supplémentaires entre signaux et slots
 		# connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 		
