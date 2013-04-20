@@ -454,7 +454,7 @@ void loop(){
                  dataFile.print(";"); 
                  
                  dataFile.print(analogRead(A3)); // affiche mesure A3
-                 dataFile.print(";"); 
+                 dataFile.println(";"); 
                  
               } // fin for                
                 
