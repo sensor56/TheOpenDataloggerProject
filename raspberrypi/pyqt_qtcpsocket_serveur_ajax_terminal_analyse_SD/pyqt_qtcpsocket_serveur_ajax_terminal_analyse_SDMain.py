@@ -14,7 +14,10 @@ import time # temps
 import serial # communication serie
 import re # module pour analyse de chaîne avec expressions régulières
 
-sys.path.append('/home/xavier/www/mon_arduino/python_avec_arduino/mes_libs_python') # le rép où se trouve la lib'
+# sys.path.append('/home/xavier/www/mon_arduino/python_avec_arduino/mes_libs_python') # le rép où se trouve la lib'
+#sys.path.append('/home/xavier/www/mon_arduino/python_avec_arduino/mes_libs_python') # le rép où se trouve la lib'
+sys.path.append(os.getenv('HOME')+'//www/mon_arduino/python_avec_arduino/mes_libs_python') # le rép où se trouve la lib'
+
 #from utils import * # importe librairie perso
 import utils # importe librairie perso
 
