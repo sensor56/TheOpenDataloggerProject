@@ -757,8 +757,8 @@ Connnection: close
 					timerRTCList[index].restart() # redémarre le timer voulu 
 					reponseAjax=reponseAjax+"\nTimer " + str(index) + " relancé."
 	
-			#-- status(index)
-			args=utils.testInstructionLong(chaineAnalyse, "status(", True) # extrait paramètre chaine au format racine (xx,xx,xx,..)
+			#-- info(index)
+			args=utils.testInstructionLong(chaineAnalyse, "info(", True) # extrait paramètre chaine au format racine (xx,xx,xx,..)
 			if args:  # args est True si 1 ou plusieurs paramètres numériques sont trouvés - None sinon 
 				print args
 				reponseAjax=reponseAjax+str(args)
@@ -768,10 +768,10 @@ Connnection: close
 					strStatus=timerRTCList[index].status(index) # redémarre le timer voulu 
 					reponseAjax=reponseAjax+"\n" + strStatus
 
-			#-- statusAll()
-			if chaineAnalyse=="statusAll()": # si la chaîne brute sans paramètre est reçue 
-				print "statusAll() valide!"
-				reponseAjax=reponseAjax+"\nstatusAll() valide!"
+			#-- infoAll()
+			if chaineAnalyse=="infoAll()": # si la chaîne brute sans paramètre est reçue 
+				print "infoAll() valide!"
+				reponseAjax=reponseAjax+"\ninfoAll() valide!"
 
 				for index in range(0,len(timerRTCList)): # défile tous les timers				
 					strStatus=timerRTCList[index].status(index) # redémarre le timer voulu 
