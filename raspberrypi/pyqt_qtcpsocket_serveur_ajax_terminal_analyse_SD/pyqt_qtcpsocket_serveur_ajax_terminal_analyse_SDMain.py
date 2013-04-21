@@ -92,7 +92,9 @@ Content-Type: text/html
 Connnection: close
 
 """)
-
+		
+		self.lineEditCheminRep.setText(os.getenv('HOME')+'/data/texte') # chemin par défaut du champ
+		
 	# les fonctions appelées, utilisées par les signaux 
 	
 	
