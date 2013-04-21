@@ -18,7 +18,6 @@ sys.path.append(os.getenv('HOME')+'/mes_libs_python') # le rép où se trouve la
 
 #from utils import * # importe librairie perso
 import utils # importe librairie perso
-
 from PyQt4.QtNetwork import * # module réseau Qt4
 
 from pyqt_qtcpsocket_serveur_ajax_terminal_analyse_SD import * # fichier obtenu à partir QtDesigner et pyuic4
