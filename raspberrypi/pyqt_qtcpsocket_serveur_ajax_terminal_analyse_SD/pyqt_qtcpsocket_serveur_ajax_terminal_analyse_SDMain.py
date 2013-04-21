@@ -14,16 +14,14 @@ import time # temps
 import serial # communication serie
 import re # module pour analyse de chaîne avec expressions régulières
 
-# sys.path.append('/home/xavier/www/mon_arduino/python_avec_arduino/mes_libs_python') # le rép où se trouve la lib'
-#sys.path.append('/home/xavier/www/mon_arduino/python_avec_arduino/mes_libs_python') # le rép où se trouve la lib'
-sys.path.append(os.getenv('HOME')+'//www/mon_arduino/python_avec_arduino/mes_libs_python') # le rép où se trouve la lib'
+sys.path.append(os.getenv('HOME')+'/mes_libs_python') # le rép où se trouve la lib'
 
 #from utils import * # importe librairie perso
 import utils # importe librairie perso
 
 from PyQt4.QtNetwork import * # module réseau Qt4
 
-from tuto_pyqt_qtcpsocket_serveur_ajax_terminal_analyse_SD import * # fichier obtenu à partir QtDesigner et pyuic4
+from pyqt_qtcpsocket_serveur_ajax_terminal_analyse_SD import * # fichier obtenu à partir QtDesigner et pyuic4
 
 class myApp(QWidget, Ui_Form): # la classe reçoit le Qwidget principal ET la classe définie dans test.py obtenu avec pyuic4
 	def __init__(self, parent=None):
