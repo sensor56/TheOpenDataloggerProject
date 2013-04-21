@@ -106,7 +106,7 @@ class Ui_Form(object):
         self.pushButtonInitServeur.setText(QtGui.QApplication.translate("Form", "Init serv.", None, QtGui.QApplication.UnicodeUTF8))
         self.labelEnvoiReseau.setText(QtGui.QApplication.translate("Form", "Chaines envoyées vers le serveur :", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButtonEnregistrer.setText(QtGui.QApplication.translate("Form", "Enregistrer", None, QtGui.QApplication.UnicodeUTF8))
-        self.lineEditCheminRep.setText(QtGui.QApplication.translate("Form", "/home/xavier/Bureau/data/texte", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEditCheminRep.setText(QtGui.QApplication.translate("Form", "", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButtonOuvrir.setText(QtGui.QApplication.translate("Form", "Ouvrir", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButtonOuvrirRep.setText(QtGui.QApplication.translate("Form", "Ouvrir", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButtonNouveau.setText(QtGui.QApplication.translate("Form", "Nouveau", None, QtGui.QApplication.UnicodeUTF8))
