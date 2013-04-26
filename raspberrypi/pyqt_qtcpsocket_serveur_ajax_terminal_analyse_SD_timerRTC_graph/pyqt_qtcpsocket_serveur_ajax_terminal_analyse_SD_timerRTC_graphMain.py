@@ -25,7 +25,7 @@ from timerRTC import  * # importe classe perso implémentant timer RTC
 
 from PyQt4.QtNetwork import * # module réseau Qt4
 
-from tuto_pyqt_qtcpsocket_serveur_ajax_terminal_analyse_SD_timerRTC_graph import * # fichier obtenu à partir QtDesigner et pyuic4
+from pyqt_qtcpsocket_serveur_ajax_terminal_analyse_SD_timerRTC_graph import * # fichier obtenu à partir QtDesigner et pyuic4
 
 timerRTCList=None # nom global
 
