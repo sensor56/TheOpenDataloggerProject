@@ -30,7 +30,7 @@ from pyqt_qtcpsocket_serveur_ajax_terminal_analyse_SD_timerRTC_graph import * # 
 timerRTCList=None # nom global
 
 class myApp(QWidget, Ui_Form): # la classe reçoit le Qwidget principal ET la classe définie dans test.py obtenu avec pyuic4
-  def __init__(self, parent=None):
+	def __init__(self, parent=None):
 		QWidget.__init__(self) # initialise le Qwidget principal 
 		self.setupUi(parent) # Obligatoire 
 
