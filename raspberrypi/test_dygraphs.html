@@ -9,7 +9,7 @@
 				function path(jsFileNameIn) { // fonction pour fixer chemin absolu 				 
 					var js = document.createElement("script"); 
 					js.type = "text/javascript"; 
-					js.src = " http://127.0.0.1/dygraphs/"+jsFileNameIn; // <=== modifier ici chemin ++ 
+					js.src = "/dygraphs/"+jsFileNameIn; // <=== modifier ici chemin ++ 
 					document.head.appendChild(js);					 
 					//alert(js.src); // debug 
 				} 
