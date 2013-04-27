@@ -1,0 +1,54 @@
+<!DOCTYPE html > 
+<html> 
+  <head> 
+    
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> <!-- Encodage de la page  --> 
+
+			<script language="javascript" type="text/javascript"> 
+	 		<!-- 
+				function path(jsFileNameIn) { // fonction pour fixer chemin absolu 				 
+					var js = document.createElement("script"); 
+					js.type = "text/javascript"; 
+					js.src = " http://127.0.0.1/mes_javascripts/dygraphs/"+jsFileNameIn; // <=== modifier ici chemin ++ 
+					document.head.appendChild(js);					 
+					//alert(js.src); // debug 
+				} 
+
+				//---- fichiers a charger --- 				 
+				path('dygraph-combined.js'); 
+
+				window.onload = function () { // fonction executee apres chargement de la page HTML 
+ 
+					//--- code graphique --- 
+              		 
+				g = new Dygraph( // cree l'objet du graphique 
+
+			    	// containing div 
+			   	 document.getElementById("graphdiv"), // objet div utilise appelé par son nom 
+
+			    	// CSV or path to a CSV file. 
+			    	"Date,Temperature\n" + 
+			    	"2008-05-07,75\n" + 
+			    	"2008-05-08,70\n" + 
+			    	"2008-05-09,80\n" 
+
+  				); // fin déclaration 
+  				 
+  				           
+        		} // fin fonction onload 
+        	-->	 
+			</script>   
+        
+    <title>Test RGraph simple</title> 
+    
+	</head> 
+
+	<body> 
+	 
+    	<div id="graphdiv"></div> 
+    	<br /> 
+		Test simple d'une courbe dygraph 
+    
+
+	</body> 
+</html>
