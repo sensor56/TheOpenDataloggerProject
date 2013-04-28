@@ -927,7 +927,7 @@ window.onload = function () { // au chargement de la page
         null
       ]
 
-				graph = new Dygraph( // cree l'objet du graphique 
+	graph = new Dygraph( // cree l'objet du graphique 
 
 			    //  div conteneur
 			   	 document.getElementById(\"graphdiv\"), // objet div utilise appelé par son nom 
@@ -967,7 +967,7 @@ window.onload = function () { // au chargement de la page
 			    	} // fin parametres  
 			    	
 
-  				); // fin déclaration 
+  				); // fin déclaration graphique
   			
 	
 	} // fin onload
@@ -1035,9 +1035,40 @@ function drawData(stringDataIn) {
 				textarea.value=textarea.value+stringDataIn+\"\\n\"; // ajoute la chaine au début - décale vers le bas...
 				textarea.setSelectionRange(textarea.selectionEnd-1,textarea.selectionEnd-1) ; // se place à la fin -1 pour avant saut de ligne
 						
-			graph.updateOptions({
-                  'file':stringDataIn // met à jour les donnees du graphique sans changer les autres parametres 
-                });
+		
+		
+		// Mise a jour du grahique - preferer creation de 0 au chargement d'un nouveau fichier
+		//graph.updateOptions({
+                //  'file':stringDataIn // met à jour les donnees du graphique sans changer les autres parametres 
+                //});
+
+	graph = new Dygraph( // cree l'objet du graphique 
+
+			    //  div conteneur
+			   	 document.getElementById(\"graphdiv\"), // objet div utilise appelé par son nom 
+
+			//--- definition des donnees du graphique 
+			stringDataIn, // donnees du graphique 
+			    	
+			    	//-- parametres a utiliser pour le graphique 
+			    	{
+			    	width: 800, // largeur graphique
+					height: 400, // hauteur graphique 
+
+					axisLabelFontSize: 10, // police des axes x et y 
+
+					labelsDivStyles: { 'textAlign': 'right', 'fontSize':'10px' } , // parametre css legende - font-weight:bold devient 'fontWeight': 'bold'
+
+               colors: colorSets[1], // fixe le jeu de couleurs a utiliser 
+			    	
+			    	
+			    	showRangeSelector: true, // affiche l'outil de selection plage voulue
+			    	
+			    	
+			    	} // fin parametres  
+			    	
+
+  				); // fin déclaration graphique
 
 		
 	} // fin if graphdata =  données graphiques reçues 
