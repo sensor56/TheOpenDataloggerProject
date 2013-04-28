@@ -17,7 +17,6 @@ import serial # communication serie
 import re # module pour analyse de chaîne avec expressions régulières
 import random # module pour génération nombres aléatoires
 
-
 sys.path.append(os.getenv('HOME')+'/mes_libs_python') # le rép où se trouve la lib'
 #from utils import * # importe librairie perso
 import utils # importe librairie perso
@@ -25,7 +24,7 @@ from timerRTC import  * # importe classe perso implémentant timer RTC
 
 from PyQt4.QtNetwork import * # module réseau Qt4
 
-from tuto_pyqt_qtcpsocket_serveur_ajax_terminal_analyse_SD_timerRTC_graph_dygraphs import * # fichier obtenu à partir QtDesigner et pyuic4
+from pyqt_qtcpsocket_serveur_ajax_terminal_analyse_SD_timerRTC_graph_dygraphs import * # fichier obtenu à partir QtDesigner et pyuic4
 
 timerRTCList=None # nom global
 
@@ -461,7 +460,7 @@ Connnection: close
 
 		for i in range(0,nombreLignesIn): # défile n lignes
 					
-			valeur=random.randint(0,1023) # génére une valeur aléatoire entre 0 et 1023
+			valeur=512+random.randint(-1023/8,1023/8) # génére une valeur aléatoire autour de 512
 			
 			myFile.write(str(i)+","+str(valeur)+"\n") # écrit les données dans le fichier	+ saut ligne - format time, y1, y2..,yn\n
 			# avec dygraphs, séparateur = "," par défaut 
@@ -872,8 +871,8 @@ Connnection: close
 function path(jsFileNameIn) { // fonction pour fixer chemin absolu 				
 	var js = document.createElement("script");
 	js.type = "text/javascript";
-	//js.src = " http://www.mon-club-elec.fr/mes_javascripts/dygraphs/"+jsFileNameIn; // <=== modifier ici chemin ++ 
-	js.src = "http://"+window.location.hostname+":80"+"/dygraphs/"+jsFileNameIn; // utilisation server http local port 80 
+	//js.src = " http://www.mon-club-elec.fr/mes_javascripts/dygraphs/"+jsFileNameIn; // <=== modifier ici chemin ++
+	js.src = "http://"+window.location.hostname+":80"+"/dygraphs/"+jsFileNameIn; // si utilisation server http local port 80
 	document.head.appendChild(js);					
 	//alert(js.src); // debug
 }  // fin fonctin path(chemin)
@@ -1049,6 +1048,27 @@ function drawData(stringDataIn) {
 	
 } // fin fonction drawData
 
+      //--- fonction appelee lors changement etat du input checkbox	echelle Y auto 	
+		function changeY(el) {
+       
+       if (el.checked) { // si coche = echelle auto
+       
+	       graph.updateOptions({
+    	           'valueRange': [null,null] // echelle auto
+          }); // fin update
+               
+      } // fin si el.checked
+      else { // sinon  echelle fixe 
+ 
+ 	       graph.updateOptions({
+    	           'valueRange': [0,1023] // echelle fixe
+          }); // fin update
+      
+      } // fin else 
+               
+      } // fin change Y 
+
+
 //-->
 </script>
 <!-- Fin du code Javascript -->
@@ -1069,6 +1089,9 @@ Serveur Python graphique
 <div id="graphdiv"></div>
 <br />
 
+    <input type=checkbox id=20 onClick="changeY(this)" checked >
+    <label for="4"> echelle Y auto</label>
+	<br />
 
 <input type=\"text\" id=\"valeur\" size=\"50\" />
 <button type=\"button\" onclick=\"onclickButton()\">Envoyer</button>
