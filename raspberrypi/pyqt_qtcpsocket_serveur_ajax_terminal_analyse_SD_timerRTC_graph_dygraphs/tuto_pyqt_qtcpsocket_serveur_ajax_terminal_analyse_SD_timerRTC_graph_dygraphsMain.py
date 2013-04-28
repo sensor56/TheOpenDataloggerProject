@@ -873,7 +873,7 @@ function path(jsFileNameIn) { // fonction pour fixer chemin absolu
 	var js = document.createElement("script");
 	js.type = "text/javascript";
 	//js.src = " http://www.mon-club-elec.fr/mes_javascripts/dygraphs/"+jsFileNameIn; // <=== modifier ici chemin ++ 
-	js.src = "/dygraphs/"+jsFileNameIn; // utilisation server local
+	js.src = "http://"+window.location.hostname+":80"+"/dygraphs/"+jsFileNameIn; // utilisation server http local port 80 
 	document.head.appendChild(js);					
 	//alert(js.src); // debug
 }  // fin fonctin path(chemin)
