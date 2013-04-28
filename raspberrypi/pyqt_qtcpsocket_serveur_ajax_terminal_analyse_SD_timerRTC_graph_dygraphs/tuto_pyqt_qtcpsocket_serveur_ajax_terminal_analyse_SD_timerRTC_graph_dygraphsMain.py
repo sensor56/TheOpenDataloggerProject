@@ -872,7 +872,8 @@ Connnection: close
 function path(jsFileNameIn) { // fonction pour fixer chemin absolu 				
 	var js = document.createElement("script");
 	js.type = "text/javascript";
-	js.src = " http://www.mon-club-elec.fr/mes_javascripts/dygraphs/"+jsFileNameIn; // <=== modifier ici chemin ++ 
+	//js.src = " http://www.mon-club-elec.fr/mes_javascripts/dygraphs/"+jsFileNameIn; // <=== modifier ici chemin ++ 
+	js.src = "/dygraphs/"+jsFileNameIn; // utilisation server local
 	document.head.appendChild(js);					
 	//alert(js.src); // debug
 }  // fin fonctin path(chemin)
