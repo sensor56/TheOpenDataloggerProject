@@ -890,7 +890,7 @@ var contextCanvas = null;
 var textInputX=null;
 var textInputY=null;
 
-var colorSets=null; tableau pour definition jeu couleurs graphique
+var colorSets=null; // tableau pour definition jeu couleurs graphique
 
 var delai=50;
 var compt=0;
