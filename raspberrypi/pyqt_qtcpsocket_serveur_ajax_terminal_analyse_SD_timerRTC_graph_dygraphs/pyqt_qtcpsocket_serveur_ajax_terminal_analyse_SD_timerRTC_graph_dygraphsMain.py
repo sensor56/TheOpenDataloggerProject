@@ -890,6 +890,8 @@ var contextCanvas = null;
 var textInputX=null;
 var textInputY=null;
 
+var colorSets=null; tableau pour definition jeu couleurs graphique
+
 var delai=50;
 var compt=0;
 var x=0;
@@ -921,7 +923,7 @@ window.onload = function () { // au chargement de la page
 	//var valeurs = new Array(102,511,255,127,63,32); // tableau valeurs par defaut
 	
 	
-	var colorSets = [ // definition des set de couleurs a utiliser 
+	colorSets = [ // definition des set de couleurs a utiliser 
         ['#284785', '#EE1111', '#8AE234'], // 1er jeu de couleur - couleur utilisee dans ordre trace des courbes
         ['rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(0,0,255)'], // 2eme jeu de couleur - format rgb
         null
