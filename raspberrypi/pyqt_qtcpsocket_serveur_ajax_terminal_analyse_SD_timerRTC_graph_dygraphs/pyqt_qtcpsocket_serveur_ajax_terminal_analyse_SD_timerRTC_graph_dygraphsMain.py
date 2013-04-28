@@ -935,7 +935,7 @@ window.onload = function () { // au chargement de la page
 			//--- definition des donnees par une fonction 
 			
            function() {
-              var ret = \"Date,Hours,Minutes\\n\";
+              var ret = \"Date,Heures,Minutes\\n\"; // labels
               var zp = function(x) { if (x<10) return \"0\"+x; else return \"\"+x;};
               for (var d = 0; d <1; d++) { // défile jour 
                 for (var h = 0; h < 24; h++) {
