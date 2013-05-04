@@ -37,6 +37,7 @@ void setup () {
     RTC.begin(DateTime(__DATE__, __TIME__));// initialise base temps millis
     
     Serial.println("--- Test utilisation timer RTC (index : 0 - 5) ---");
+    Serial.println("Saisir une chaine reconnue - ex : start(0,10) ");
     
 } // fin setup 
 
