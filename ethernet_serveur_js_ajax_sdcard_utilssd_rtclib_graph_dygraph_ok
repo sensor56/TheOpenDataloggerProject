@@ -1066,7 +1066,7 @@ void loop(){
              client.println(F("<!--       "));
 
             //-- inclusion librairie utile 
-            client.println(F("function path(jsFileNameIn) {")); // fonction pour fixer chemin absolu   			
+            client.println(F("function path(jsFileNameIn) {")); // fonction pour fixer chemin absolu     		
               client.println(F("var js = document.createElement(\"script\");"));
               client.println(F("js.type = \"text/javascript\";"));
               client.println(F("js.src = \" http://www.mon-club-elec.fr/mes_javascripts/dygraphs/\"+jsFileNameIn; ")); // <=== modifier ici chemin ++ 
@@ -1351,8 +1351,7 @@ void timerEvent(int indexIn){
  //if (indexIn==0) { // si timer 1 - pas besoin de tester l'indice - quelqu'il soit, on exécute un code basé sur l'indice... 
  
          //----- crée le nom du fichier à partir de la date courante au format 20130m0d.tx0
-         //String nomFichier=String(now.year());
-        String nomFichier="2013";
+         String nomFichier=String(now.year());
          if (now.month()<10) nomFichier=nomFichier+"0"+String(now.month()); else nomFichier=nomFichier+String(now.month()); // pour format 08.. 
          if (now.day()<10) nomFichier=nomFichier+"0"+String(now.day()); else nomFichier=nomFichier+String(now.day()); // pour format 08.. 
          nomFichier=nomFichier+".tx"+String(indexIn);
@@ -1428,7 +1427,7 @@ void timerEventEthernet(int indexIn){
          
          //----- crée le nom du fichier à partir de la date courante au format 20130m0d.tx0
          
-         String AAAA=""; 
+         String AAAA="2013"; 
          String MM=""; 
          String JJ=""; 
          
@@ -1436,7 +1435,8 @@ void timerEventEthernet(int indexIn){
          String mm=""; 
          String ss="";
          
-         AAAA=String(now.year());
+         //AAAA=String(now.year());
+         //AAAA="2013";
          
          if (now.month()<10) MM="0"+String(now.month()); else MM=String(now.month()); // pour format 08.. 
          if (now.day()<10) JJ="0"+String(now.day()); else JJ=String(now.day()); // pour format 08.. 
