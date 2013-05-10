@@ -93,7 +93,7 @@ void loop(){
            
         //--- fonction avec parametre Texte - ls (chemin)
         param=""; // RAZ param...
-        param=utils.testInstructionString("ls(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+        param=utils.testInstructionString(chaineReception, "ls(",  true); // extrait le paramètre de la chaine avec debug
         //param=utils.testInstructionString("LED(", chaineReception); // extrait le paramètre de la chaine sans debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
@@ -114,7 +114,7 @@ void loop(){
   
         //--- fonction avec parametre Texte - createfile(chemin/nom.txt)
         param=""; // RAZ param...
-        param=utils.testInstructionString("createfile(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+        param=utils.testInstructionString(chaineReception, "createfile(",  true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
@@ -150,7 +150,7 @@ void loop(){
 
         //--- fonction avec parametre Texte - write(chemin,texte)
        param=""; // RAZ param...
-       param=utils.testInstructionString("write(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+       param=utils.testInstructionString( chaineReception, "write(", true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
@@ -196,7 +196,7 @@ void loop(){
 
         //--- fonction avec parametre Texte - read(chemin/nom.txt)
         param=""; // RAZ param...
-        param=utils.testInstructionString("read(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+        param=utils.testInstructionString(chaineReception, "read(",  true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
@@ -234,7 +234,7 @@ void loop(){
 
         //--- fonction avec parametre Texte - remove(chemin/nom.txt)
         param=""; // RAZ param...
-        param=utils.testInstructionString("remove(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+        param=utils.testInstructionString(chaineReception, "remove(",  true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
@@ -276,7 +276,7 @@ void loop(){
 
          //--- fonction avec parametre Texte - lines(chemin/nom.txt)
         param=""; // RAZ param...
-        param=utils.testInstructionString("lines(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+        param=utils.testInstructionString(chaineReception, "lines(",  true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
@@ -316,7 +316,7 @@ void loop(){
         //=========================================================================================
         //--- fonction avec parametre Texte - getline(chemin,ligne)
        param=""; // RAZ param...
-       param=utils.testInstructionString("getline(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+       param=utils.testInstructionString(chaineReception, "getline(",  true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
@@ -361,7 +361,7 @@ void loop(){
 
          //--- fonction avec parametre Texte - size(chemin/nom.txt)
         param=""; // RAZ param...
-        param=utils.testInstructionString("size(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+        param=utils.testInstructionString(chaineReception, "size(",  true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
@@ -404,7 +404,7 @@ void loop(){
 
         //--- fonction avec parametre Texte - testdatalog(chemin,nombreMesures)
        param=""; // RAZ param...
-       param=utils.testInstructionString("testdatalog(", chaineReception, true); // extrait le paramètre de la chaine avec debug
+       param=utils.testInstructionString(chaineReception, "testdatalog(",  true); // extrait le paramètre de la chaine avec debug
 
         if (param!="") { // si une chaine a été reçue en paramètre
 
